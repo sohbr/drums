@@ -48,10 +48,10 @@
       </div>
     </div>
 
-    <iframe width='420' height='345' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe>
+    <iframe width='420' height='345' frameborder='0'  src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe>
 
     <form>Drum to another video<br>
-      <input type='text' name='url'  text-align='center' placeholder="... paste youtube URL ...">
+      <input type='text' name='address'  text-align='center' placeholder="... paste youtube URL ...">
       <input type='submit' value='Submit'>
     </form>
 
@@ -73,6 +73,7 @@
       audio.currentTime = 0
       audio.play()
       key.classList.add('playing')
+      console.log(address);
     }
 
     function playSound(e) {
@@ -92,6 +93,7 @@
     keys.forEach(key => key.addEventListener('transitionend', removeTransition))
     window.addEventListener('keydown', playSound)
   </script>
+  <script src="./getUrlParams.js"></script>
 
   </body>
 
