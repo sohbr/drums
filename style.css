@@ -71,9 +71,17 @@ span {
   color: #ffc600;
 }
 
+#frame-container {
+  width: 39%;
+  height: 47%;
+  position: absolute;
+  margin-top: 180px;
+  /* background-image: url("curtains.jpg"); */
+  /* background-size: 100% 100%; */
+}
+
 iframe {
   margin-top: 50px;
-
 }
 
 form {
