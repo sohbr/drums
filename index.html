@@ -68,6 +68,8 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
+
+    //allows mouseclick to play drums
     function clickSound(e) {
       const audio = document.querySelector(`audio[data-key="${e}"]`)
       const key = document.querySelector(`.key[data-key="${e}"]`)
@@ -77,6 +79,7 @@
       key.classList.add('playing')
     }
 
+    //allows keyboard to play drums
     function playSound(e) {
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
       const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
@@ -104,14 +107,14 @@
           queryString = temp[temp.length- 1];
         }
       }
-
       return queryString;
     }
+
+    //interpolates video id into youtube embed address
     let videoId = getUrlParams(document.URL);
     if (videoId === "") videoId = 'dp42JpL08Jg'
     let embedAddress = `https://www.youtube.com/embed/${videoId}`
     document.getElementById('iframe').setAttribute('src',embedAddress)
-
 
 
   </script>
